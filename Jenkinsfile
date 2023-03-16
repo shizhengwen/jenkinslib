@@ -1,7 +1,7 @@
 @Library('jenkinslib') _
 def tools = new org.devops.tools()
 String workspace = "/opt/jenkins/workspace"
-
+hello()
 pipeline {
     
 	// 指定在哪个节点上运行
