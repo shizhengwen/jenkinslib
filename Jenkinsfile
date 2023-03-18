@@ -27,6 +27,7 @@ pipeline {
 			    timeout(time:5, unit:"MINUTES"){
 				    script{ // 填写运行代码
 					    print("获取代码")
+					    tools.PrintMsg("获取代码", "green")
 					    print("${test}")
 					    
 					    //input id: 'Test', message: '我们是否要继续？', ok: '是', parameters: [choice(choices: ['a', 'b'], name: 'test1')]
@@ -44,6 +45,7 @@ pipeline {
         			    timeout(time:20, unit:"MINUTES"){
         				    script{
         					    print("应用打包")
+						    tools.PrintMsg("应用打包", "green")
         					    //mvnHome = tool "m2"
         					    //print(mvnHome)
         					    //sh "${mvnHome}/bin/mvn --version"
@@ -58,7 +60,7 @@ pipeline {
         			    timeout(time:30, unit:"MINUTES"){
         				    script{
         					    print("代码扫描")
-                      tools.PrintMsg("this is my lib !")
+                      tools.PrintMsg("代码扫描", "green")
         					}
         				}
         			}
